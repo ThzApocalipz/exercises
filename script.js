@@ -40,17 +40,17 @@
 function canConnect(user) {
     const { age, isAuthorized, isBanned } = user;
 
-    const canConnect =
+    const Connection =
     (!isBanned && !isAuthorized && age >= 18) ||
     (!isBanned && isAuthorized && age >= 18);
 
       console.log(
-    canConnect
+    Connection
       ? "peut se connecter"
       : "ne peut pas se connecter"
   );
 
-  return canConnect;
+  return Connection;
 }
 
 const user1 = { age: 25, authorized: true,  banned: false }; 
