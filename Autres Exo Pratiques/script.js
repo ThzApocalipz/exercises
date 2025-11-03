@@ -5,37 +5,57 @@
 console.log("Exo 1: Somme entiers de 1 à N");
 
 let N = Number(prompt("Entrez un nombre entier N:"));
+let M = 5
+let P = 7
 
-if (!Number.isInteger(N) || N < 1) {
-    console.log("Veuillez entrer un nombre entier positif.");
+function calculSomme(numberParam) {
+    
+    if (!Number.isInteger(numberParam) || numberParam < 1) {
+        console.log("Veuillez entrer un nombre entier positif.");
     } else {
-    let somme = 0;
-    for (let i = 1; i <= N; i++) {
-        somme += i;
+        let somme = 0;
+        for (let i = 1; i <= numberParam; i++) {
+            somme += i;
+        }
+
+    
+        console.log(`La somme des nombres de 1 à ${numberParam} est ${somme}.`);
+        alert(`La somme des nombres de 1 à ${numberParam} est ${somme}.`);
     }
-    console.log(`La somme des nombres de 1 à ${N} est ${somme}.`);
 }
+
+calculSomme(M);
+calculSomme(P);
+
+
 
 // Exo 2: Table de multiplication
 
 console.log("Exo 2: Table de multiplication");
 
 let X = Number(prompt("Entrez un nombre pour afficher sa table de multiplication :"));
+let A = 5
 
-if (isNaN(X)) {
-    console.log("Veuillez entrer un nombre valide.");
-} else {
-    console.log(`Table de multiplication de ${X} :`);
+function multiplicationTable(numberMulti) {
+
+    if (isNaN(numberMulti)) {
+        console.log("Veuillez entrer un nombre valide.");
+    } else {
+        console.log(`Table de multiplication de ${numberMulti} :`);
     
-    for (let i = 1; i <= 10; i++) {
-        console.log(`${X} x ${i} = ${X * i}`);
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${numberMulti} x ${i} = ${numberMulti * i}`);
+        }
     }
 }
 
+multiplicationTable(A);
 
 // Exo 3: Nombre premier
 
 console.log("Exo 3: Nombre premier");
+
+let B = 11
 
 let nombrePremier = parseInt(prompt("Entrez un nombre pour vérifier s'il est premier :"));
 function estPremier(nombre) {
@@ -48,9 +68,15 @@ function estPremier(nombre) {
 alert(estPremier(nombrePremier) ? `${nombrePremier} est premier` : `${nombrePremier} n'est pas premier`);
 console.log(estPremier(nombrePremier) ? `${nombrePremier} est premier` : `${nombrePremier} n'est pas premier`);
 
+estPremier(B);
+
+console.log(estPremier(B) ? `${B} est premier` : `${B} n'est pas premier`);
+
 // Exo 4: Factoriel
 
 console.log("Exo 4: Factoriel");
+
+let C = 6
 
 let nombreFactoriel = parseInt(prompt("Entrez un nombre pour calculer son factoriel :"));
 function factoriel(n) {
@@ -60,9 +86,15 @@ function factoriel(n) {
 alert(`Le factoriel de ${nombreFactoriel} est ${factoriel(nombreFactoriel)}`);
 console.log(`Le factoriel de ${nombreFactoriel} est ${factoriel(nombreFactoriel)}`);
 
+factoriel(C);
+
+console.log(`Le factoriel de ${C} est ${factoriel(C)}`);
+
 // Exo 5: Filtrer tableau
 
 console.log("Exo 5: Filtrer tableau");
+
+let D = [12, 7, 5, 20, 33, 42, 8, 15];
 
 let tableau = [];
 
@@ -92,5 +124,10 @@ let resultat = filtrerTableau(tableau);
 alert(`Nombres pairs : ${resultat.pairs}\nMultiples de 3 : ${resultat.multiplesDe3}`);
 console.log(`Nombres pairs : ${resultat.pairs}`);
 console.log(`Multiples de 3 : ${resultat.multiplesDe3}`);
+
+filtrerTableau(D);
+
+console.log("Nombres pairs dans D :", filtrerTableau(D).pairs);
+console.log("Multiples de 3 dans D :", filtrerTableau(D).multiplesDe3);
 
 
