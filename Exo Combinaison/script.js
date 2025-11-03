@@ -1,6 +1,6 @@
 
-const codeA = Math.floor(Math.random() * 6);
-const codeB = Math.floor(Math.random() * 6);
+const codeA = 2;
+const codeB = 5;
 
 let propositionA = Number(prompt("Devine la valeur de A (entre 0 et 5) :"));
 let propositionB = Number(prompt("Devine la valeur de B (entre 0 et 5) :"));
